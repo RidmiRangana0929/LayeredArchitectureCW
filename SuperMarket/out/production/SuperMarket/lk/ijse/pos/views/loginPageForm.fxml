@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="loginPageContext" prefHeight="900.0" prefWidth="1300.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.pos.controller.LoginPageFormController">
+   <children>
+      <ImageView fitHeight="536.0" fitWidth="1300.0" layoutY="126.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/gffhx.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="122.0" fitWidth="337.0" layoutX="484.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logoo.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="528.0" layoutY="830.0" onAction="#loginOnAction" prefHeight="42.0" prefWidth="248.0" style="-fx-background-color: #2f4e96; -fx-border-radius: 22 22 22 22; -fx-background-radius: 22 22 22 22;" text="Login" textFill="#bcdaff">
+         <font>
+            <Font name="Candara Bold" size="22.0" />
+         </font>
+      </JFXButton>
+      <TextField fx:id="txtUsername" layoutX="454.0" layoutY="693.0" prefHeight="35.0" prefWidth="396.0" promptText="Username" style="-fx-border-color: #2f4e96; -fx-border-radius: 10 10 10 10; -fx-background-radius: 10 10 10 10;">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="pwdPassword" layoutX="453.0" layoutY="760.0" prefHeight="40.0" prefWidth="396.0" promptText="Password" style="-fx-border-color: #2f4e96; -fx-background-radius: 10 10 10 10; -fx-border-radius: 10 10 10 10; -fx-background-color: white;" />
+   </children>
+</AnchorPane>

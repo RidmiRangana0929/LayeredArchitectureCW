@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.pos.controller.DashBordAdministratorController">
+   <children>
+      <AnchorPane fx:id="dashBordAdministratorContext" layoutY="1.0" prefHeight="900.0" prefWidth="1300.0" style="-fx-background-color: #e5f0ff;">
+         <children>
+            <AnchorPane fx:id="administratorContext" layoutY="40.0" prefHeight="860.0" prefWidth="1300.0" style="-fx-background-color: white;">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="36.0" layoutX="28.0" layoutY="810.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logout.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="191.0" fitWidth="349.0" layoutX="190.0" layoutY="427.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/dfhdfh.png" />
+                     </image>
+                  </ImageView>
+                  <AnchorPane layoutX="22.0" layoutY="131.0" prefHeight="295.0" prefWidth="676.0" style="-fx-border-color: #2f4e96; -fx-border-width: 2;">
+                     <children>
+                        <Label layoutX="16.0" layoutY="6.0" text="Add New Item" textFill="#2f4e96">
+                           <font>
+                              <Font name="Calibri" size="25.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="14.0" layoutY="41.0" prefHeight="2.0" prefWidth="646.0" />
+                        <TextField fx:id="txtItemCode" layoutX="14.0" layoutY="77.0" onAction="#searchOnAction" prefHeight="40.0" prefWidth="198.0" promptText="IC001" style="-fx-border-color: #2f4e96; -fx-border-radius: 10 10 10 10; -fx-background-radius: 10 10 10 10;">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtDescription" layoutX="235.0" layoutY="77.0" prefHeight="40.0" prefWidth="421.0" promptText="Rathna rathu kakulu" style="-fx-border-color: #2f4e96; -fx-border-radius: 10 10 10 10; -fx-background-radius: 10 10 10 10;">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtPackSize" layoutX="14.0" layoutY="153.0" prefHeight="40.0" prefWidth="198.0" promptText="5kg" style="-fx-border-color: #2f4e96; -fx-border-radius: 10 10 10 10; -fx-background-radius: 10 10 10 10;">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtUnitPrice" layoutX="236.0" layoutY="151.0" prefHeight="40.0" prefWidth="198.0" promptText="780.00" style="-fx-border-color: #2f4e96; -fx-border-radius: 10 10 10 10; -fx-background-radius: 10 10 10 10;">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </TextField>
+                        <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" layoutX="236.0" layoutY="229.0" onAction="#updateOnAction" prefHeight="40.0" prefWidth="198.0" style="-fx-background-radius: 10 10 10 10; -fx-border-radius: 10 10 10 10; -fx-background-color: #4a69bd;" text="                 Update" textFill="WHITE">
+                           <font>
+                              <Font name="Calibri Bold" size="20.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" layoutX="14.0" layoutY="229.0" onAction="#saveOnAction" prefHeight="40.0" prefWidth="198.0" style="-fx-background-radius: 10 10 10 10; -fx-border-radius: 10 10 10 10; -fx-background-color: #218c74;" text="                  Save" textFill="WHITE">
+                           <font>
+                              <Font name="Calibri Bold" size="20.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" layoutX="456.0" layoutY="229.0" onAction="#deleteOnAction" prefHeight="40.0" prefWidth="198.0" style="-fx-background-radius: 10 10 10 10; -fx-border-radius: 10 10 10 10; -fx-background-color: #eb3b5a;" text="                 Delete" textFill="WHITE">
+                           <font>
+                              <Font name="Calibri Bold" size="20.0" />
+                           </font>
+                        </JFXButton>
+                        <ImageView fitHeight="26.0" fitWidth="28.0" layoutX="79.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/disk-free-icon-font.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="26.0" fitWidth="28.0" layoutX="295.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/refresh-free-icon-font.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="26.0" fitWidth="28.0" layoutX="514.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/trash-free-icon-font.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="txtQtyOnHand" layoutX="456.0" layoutY="149.0" prefHeight="40.0" prefWidth="198.0" promptText="25" style="-fx-border-color: #2f4e96; -fx-border-radius: 10 10 10 10; -fx-background-radius: 10 10 10 10;">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="25.0" layoutY="66.0" style="-fx-background-color: white;" text="Item Code" textFill="#2f4e96">
+                           <font>
+                              <Font name="Calibri Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="246.0" layoutY="66.0" style="-fx-background-color: white;" text="Description" textFill="#2f4e96">
+                           <font>
+                              <Font name="Calibri Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="23.0" layoutY="142.0" style="-fx-background-color: white;" text="Pack Size" textFill="#2f4e96">
+                           <font>
+                              <Font name="Calibri Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="246.0" layoutY="140.0" style="-fx-background-color: white;" text="Unit Price" textFill="#2f4e96">
+                           <font>
+                              <Font name="Calibri Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="465.0" layoutY="138.0" style="-fx-background-color: white;" text="Quantity On Hand" textFill="#2f4e96">
+                           <font>
+                              <Font name="Calibri Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="22.0" layoutY="638.0" prefHeight="68.0" prefWidth="676.0" style="-fx-border-color: #218c74; -fx-border-width: 6;">
+                     <children>
+                        <Label layoutX="21.0" layoutY="-14.0" style="-fx-background-color: white;" text="Most Movable Item" textFill="#218c74">
+                           <font>
+                              <Font name="Calibri Bold" size="30.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblMost" alignment="CENTER" layoutX="15.0" layoutY="20.0" prefHeight="30.0" prefWidth="646.0" text="Pease Baby Soap x5 Pack" textFill="#111111">
+                           <font>
+                              <Font name="Calibri" size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="22.0" layoutY="726.0" prefHeight="68.0" prefWidth="676.0" style="-fx-border-color: #eb3b5a; -fx-border-width: 6;">
+                     <children>
+                        <Label layoutX="20.0" layoutY="-17.0" style="-fx-background-color: white;" text="Least Movable Item" textFill="#eb3b5a">
+                           <font>
+                              <Font name="Calibri Bold" size="30.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblLeast" alignment="CENTER" layoutX="15.0" layoutY="20.0" prefHeight="30.0" prefWidth="646.0" text="Wijaya Curry Powder 250g" textFill="#111111">
+                           <font>
+                              <Font name="Calibri" size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="447.0" layoutY="16.0" prefHeight="104.0" prefWidth="406.0" style="-fx-border-color: #2f4e96; -fx-border-width: 4;">
+                     <children>
+                        <Label fx:id="lblTime" layoutX="135.0" layoutY="-3.0" text="15:42" textFill="#2f4e96">
+                           <font>
+                              <Font name="Calibri Bold" size="59.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblDate" layoutX="146.0" layoutY="59.0" text="2022/05/26" textFill="#2f4e96">
+                           <font>
+                              <Font name="Calibri" size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="724.0" layoutY="483.0" prefHeight="84.0" prefWidth="552.0" style="-fx-border-color: #0984e3; -fx-border-width: 2;">
+                     <children>
+                        <Label fx:id="lblAnnual" alignment="CENTER" layoutX="155.0" layoutY="17.0" text="1235000.00" textFill="#2f4e96">
+                           <font>
+                              <Font name="Calibri Bold" size="50.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="724.0" layoutY="596.0" prefHeight="84.0" prefWidth="552.0" style="-fx-border-color: #0984e3; -fx-border-width: 2;">
+                     <children>
+                        <Label fx:id="lblMonthly" alignment="CENTER" layoutX="168.0" layoutY="14.0" text="102917.00" textFill="#2f4e96">
+                           <font>
+                              <Font name="Calibri Bold" size="50.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="-17.0" style="-fx-background-color: white;" text="Monthly Income" textFill="#0984e3">
+                           <font>
+                              <Font name="Calibri" size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="724.0" layoutY="709.0" prefHeight="84.0" prefWidth="552.0" style="-fx-border-color: #0984e3; -fx-border-width: 2;">
+                     <children>
+                        <Label fx:id="lblDaily" alignment="CENTER" layoutX="193.0" layoutY="13.0" text="3383.00" textFill="#2f4e96">
+                           <font>
+                              <Font name="Calibri Bold" size="50.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="-17.0" style="-fx-background-color: white;" text="Daily Income" textFill="#0984e3">
+                           <font>
+                              <Font name="Calibri" size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="739.0" layoutY="466.0" style="-fx-background-color: white;" text="Annual Income" textFill="#0984e3">
+                     <font>
+                        <Font name="Calibri Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tblItem" layoutX="724.0" layoutY="131.0" prefHeight="295.0" prefWidth="552.0" style="-fx-border-color: #2f4e96; -fx-border-width: 2;">
+                    <columns>
+                      <TableColumn fx:id="colItemCode" prefWidth="87.0" text="Item Code" />
+                      <TableColumn fx:id="colDescription" prefWidth="168.0" text="Description" />
+                        <TableColumn fx:id="colPackSize" prefWidth="98.0" text="Pack Size" />
+                        <TableColumn fx:id="colUnitPrice" prefWidth="93.0" text="Unit Price" />
+                        <TableColumn fx:id="colQtyOnHand" prefWidth="105.0" text="Qty On Hand" />
+                    </columns>
+                  </TableView>
+                  <JFXButton alignment="CENTER_RIGHT" layoutX="4.0" layoutY="807.0" onAction="#logoutOnAction" prefHeight="42.0" prefWidth="151.0" text="Logout" textFill="#eb3b5a">
+                     <font>
+                        <Font name="Calibri Bold" size="22.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="48.0" fitWidth="213.0" layoutX="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logoo2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
